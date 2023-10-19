@@ -3,7 +3,7 @@
     padding: 0;
 }
 :root{
-    --main-color:#5378af4b;
+    --main-color:#3d588134;
     --secondary-color:#eef7ff;
     --font-header-color:#dd3334;
     --font-color:#898989;
@@ -46,13 +46,29 @@ body{
     background-color: var(--main-color);
     color: white;
     text-transform: uppercase;
-    height: 400px;
     box-shadow: 0px 0px 10px #5862b098;
 }
 .days > div{
     border-right: 1px solid white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5px;
+    height: 400px;
     align-items: center;
+}
+@media(max-width:767px){
+    .days > div{
+        border-right:none;
+        box-shadow: 0px 0px 10px #5862b098;
+     background-color: var(--main-color);
+    }
+    .days{
+        background-color: transparent;
+        box-shadow: none;
+        gap: 10px;
+    }
 }
 .days div:last-child{
     border-right: none;
