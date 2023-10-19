@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+:root{
+    --main-color:#5378af4b;
+    --secondary-color:#eef7ff;
+    --font-header-color:#dd3334;
+    --font-color:#898989;
+
+}
+body{
+    background: linear-gradient(#5862b0,cyan);
+    font-family: sans-serif;
+}
+.page{
+    padding: 20px;
+}
+.page .title{
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+.local{
+    background-color: var(--main-color);
+    height: 400px;
+    box-shadow: 0px 0px 10px #5862b098;
+    color: white;
+}
+.sea{
+    height: 400px;
+    background-color: var(--main-color);
+    box-shadow: 0px 0px 10px #5862b098;
+    color: white;
+}
+.weather-header{
+    border-bottom:1px solid white ;
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+
+.days{
+    background-color: var(--main-color);
+    color: white;
+    text-transform: uppercase;
+    height: 400px;
+    box-shadow: 0px 0px 10px #5862b098;
+}
+.days > div{
+    border-right: 1px solid white;
+    text-align: center;
+    align-items: center;
+}
+.days div:last-child{
+    border-right: none;
+}
+.card-body{
+    height: 90%;
+}
+.wether-flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-transform: uppercase;
+    margin-top: 10px;
+}
+.wether-flex > div{
+    text-align: center;
+}
+.days > div h3{
+    font-size: 20px;
+   font-weight: bold;
+}
+.days > div img{
+    width: 150px;
+}
