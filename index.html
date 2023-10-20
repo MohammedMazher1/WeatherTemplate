@@ -109,7 +109,7 @@
       let index=Day.getDay();
       let dayStatus = document.getElementById('status');
       for(let i = 0 ; i<days.length;i++){
-        dayName[i].innerHTML=days[index];
+        dayName[i].innerHTML=weather[index].day;
         dayStatus.innerHTML=weather[Day.getDay()].status;
         image[i].src=weather[index].img;
         if(index / 5 == 1){
