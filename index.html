@@ -27,7 +27,7 @@
             <div class="col wether-flex">
               <div>
                 <h2 class="dayName">Sunday</h2>
-                <h4>Sunny</h4>
+                <h4 id="status">Sunny</h4>
               </div>
               <div>
                 <h2>22C</h2>
@@ -42,7 +42,7 @@
           <p>wind gusts <span>(KNOTS)</span> ................. 14</p>
           <p>wind direction ................... ............. .sw</p>
           <p>wave <span>(m)</span> ........................... 2.2</p>
-          <p>wave period <span>(KNOTS)</span> ................ 12</p>
+          <p>wave period <span>(s)</span> ................ 12</p>
           <p>wave direction .................... ............. sw</p>
           <p>temperature <span>(C)</span> .................... 23</p>
           <p>clude cover <span>(%)</span> .................... __</p>
@@ -107,8 +107,10 @@
       let image = document.getElementsByTagName('img');
       let dayName = document.getElementsByClassName('dayName');
       let index=Day.getDay();
+      let dayStatus = document.getElementById('status');
       for(let i = 0 ; i<days.length;i++){
         dayName[i].innerHTML=days[index];
+        dayStatus.innerHTML=weather[Day.getDay()].status;
         image[i].src=weather[index].img;
         if(index / 5 == 1){
           index = 0 ;
