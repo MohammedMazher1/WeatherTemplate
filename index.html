@@ -26,7 +26,7 @@
             </div>
             <div class="col wether-flex">
               <div>
-                <h2>Sunday</h2>
+                <h2 class="dayName">Sunday</h2>
                 <h4>Sunny</h4>
               </div>
               <div>
@@ -42,7 +42,7 @@
       </div>
       <div class="days row container mt-5 rounded-4 pt-5 pb-4 mb-5">
         <div class="col">
-          <h3>monday</h3>
+          <h3 class="dayName">monday</h3>
           <img src="assets/images/SunCloud.png" alt="" />
           <div>
             <h3>22 C</h3>
@@ -50,7 +50,7 @@
           </div>
         </div>
         <div class="col">
-          <h3>tuesday</h3>
+          <h3 class="dayName">tuesday</h3>
           <img src="assets/images/Cloud.png" alt="" />
           <div>
             <h3>22 C</h3>
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="col">
-          <h3>wednesday</h3>
+          <h3 class="dayName">wednesday</h3>
           <img src="assets/images/rain.png" alt="" />
           <div>
             <h3>22 C</h3>
@@ -66,7 +66,7 @@
           </div>
         </div>
         <div class="col">
-          <h3>thursday</h3>
+          <h3 class="dayName">thursday</h3>
           <img src="assets/images/RainThunder.png" alt="" />
           <div>
             <h3>22 C</h3>
@@ -74,7 +74,7 @@
           </div>
         </div>
         <div class="col">
-          <h3>friday</h3>
+          <h3 class="dayName">friday</h3>
           <img src="assets/images/Snow.png" alt="" />
           <div>
             <h3>22 C</h3>
@@ -85,19 +85,35 @@
     </div>
     <script>
       weather=[
-        {day:"sunday",status:"sunny",img:"assets/images/sun.png"},
-        {day:"monday",status:"SunCloud",img:"assets/images/SunCloud.png"},
-        {day:"tuesday",status:"Cloud",img:"assets/images/Cloud.png"},
-        {day:"wednesday",status:"rain",img:"assets/images/rain.png"},
-        {day:"thursday",status:"RainThunder",img:"assets/images/RainThunder.png"},
-        {day:"friday",status:"Snow",img:"assets/images/Snow.png"}
+        {day:"Sunday",status:"sunny",img:"assets/images/sun.png"},
+        {day:"Monday",status:"SunCloud",img:"assets/images/SunCloud.png"},
+        {day:"Tuesday",status:"Cloud",img:"assets/images/Cloud.png"},
+        {day:"Wednesday",status:"rain",img:"assets/images/rain.png"},
+        {day:"Thursday",status:"RainThunder",img:"assets/images/RainThunder.png"},
+        {day:"Friday",status:"Snow",img:"assets/images/Snow.png"},
       ];
-            let image = document.getElementsByTagName('img');
-      for(let i = 0; i< image.length ; i ++){
-          let random = Math.floor(Math.random()*6)
-          image[i].src=weather[random].img;
-          console.log(weather[random].img)
+
+      var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+
+      let Day= new Date();
+      const currentDay = days[Day.getDay()];
+      let image = document.getElementsByTagName('img');
+      let dayName = document.getElementsByClassName('dayName');
+      let index=Day.getDay();
+      for(let i = 0 ; i<days.length;i++){
+        dayName[i].innerHTML=days[index];
+        image[i].src=weather[index].img;
+        if(index / 5 == 1){
+          index = 0 ;
+        }else{
+          index++;
         }
+      }
+
+      // for(let i = 0; i< image.length ; i ++){
+      //     let random = Math.floor(Math.random()*6)
+      //     image[i].src=weather[random].img;
+      //   }
 
     </script>
     <!-- <script src="assets/Bootstrap/bootstrap.js"></script> -->
