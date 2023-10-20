@@ -25,15 +25,23 @@ body{
 }
 .local{
     background-color: var(--main-color);
-    height: 400px;
+    /* height: 400px; */
     box-shadow: 0px 0px 10px #5862b098;
     color: white;
 }
 .sea{
-    height: 400px;
+    /* height: 400px; */
     background-color: var(--main-color);
     box-shadow: 0px 0px 10px #5862b098;
     color: white;
+}
+.sea > p{
+    text-transform: uppercase;
+    color: rgb(223, 217, 252);
+}
+.sea > p > span{
+    text-transform: uppercase;
+    color: rgba(223, 217, 252, 0.425);
 }
 .weather-header{
     border-bottom:1px solid white ;
