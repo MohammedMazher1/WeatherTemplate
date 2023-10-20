@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="bootstrap-5.2.3/dist/css/bootstrap.css" />
-    <link
+    <link rel="stylesheet" href="assets/Bootstrap/bootstrap.css" />
+    <!-- <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
       integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
       crossorigin="anonymous"
-    />
+    /> -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <title>Sonrisa</title>
+    <title>Weather</title>
   </head>
   <body>
     <div class="page container">
@@ -51,7 +51,7 @@
         </div>
         <div class="col">
           <h3>tuesday</h3>
-          <img src="assets/images/RainThunder.png" alt="" />
+          <img src="assets/images/Cloud.png" alt="" />
           <div>
             <h3>22 C</h3>
             <h3>71.6 f</h3>
@@ -67,7 +67,7 @@
         </div>
         <div class="col">
           <h3>thursday</h3>
-          <img src="assets/images/Snow.png" alt="" />
+          <img src="assets/images/RainThunder.png" alt="" />
           <div>
             <h3>22 C</h3>
             <h3>71.6 f</h3>
@@ -75,7 +75,7 @@
         </div>
         <div class="col">
           <h3>friday</h3>
-          <img src="assets/images/Cloud.png" alt="" />
+          <img src="assets/images/Snow.png" alt="" />
           <div>
             <h3>22 C</h3>
             <h3>71.6 f</h3>
@@ -83,6 +83,23 @@
         </div>
       </div>
     </div>
-    <script src="bootstrap-5.2.3/dist/js/bootstrap.js"></script>
+    <script>
+      weather=[
+        {day:"sunday",status:"sunny",img:"assets/images/sun.png"},
+        {day:"monday",status:"SunCloud",img:"assets/images/SunCloud.png"},
+        {day:"tuesday",status:"Cloud",img:"assets/images/Cloud.png"},
+        {day:"wednesday",status:"rain",img:"assets/images/rain.png"},
+        {day:"thursday",status:"RainThunder",img:"assets/images/RainThunder.png"},
+        {day:"friday",status:"Snow",img:"assets/images/Snow.png"}
+      ];
+            let image = document.getElementsByTagName('img');
+      for(let i = 0; i< image.length ; i ++){
+          let random = Math.floor(Math.random()*6)
+          image[i].src=weather[random].img;
+          console.log(weather[random].img)
+        }
+
+    </script>
+    <!-- <script src="assets/Bootstrap/bootstrap.js"></script> -->
   </body>
 </html>
