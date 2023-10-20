@@ -105,16 +105,16 @@
       let Day= new Date();
       let image = document.getElementsByTagName('img');
       let dayName = document.getElementsByClassName('dayName');
-      let index=Day.getDay();
+      let indexOfDay=Day.getDay();
       let dayStatus = document.getElementById('status');
-      for(let i = 0 ; i<days.length;i++){
-        dayName[i].innerHTML=weather[index].day;
+      for(let i = 0 ; i<weather.length;i++){
+        dayName[i].innerHTML=weather[indexOfDay].day;
         dayStatus.innerHTML=weather[Day.getDay()].status;
-        image[i].src=weather[index].img;
-        if(index / 5 == 1){
-          index = 0 ;
+        image[i].src=weather[indexOfDay].img;
+        if(indexOfDay / 5 == 1){
+          indexOfDay = 0 ;
         }else{
-          index++;
+          indexOfDay++;
         }
       }
 
