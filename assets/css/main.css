@@ -10,11 +10,12 @@
 
 }
 body{
-    background: linear-gradient(#5862b0,cyan);
+    background: linear-gradient(270deg,#5862b0,cyan);
     font-family: sans-serif;
 }
 .page{
     padding: 20px;
+    
 }
 .page .title{
     text-align: center;
@@ -22,6 +23,9 @@ body{
     text-transform: uppercase;
     font-weight: bold;
     
+}
+.report{
+    margin: auto;
 }
 .local{
     background-color: var(--main-color);
@@ -55,6 +59,7 @@ body{
     color: white;
     text-transform: uppercase;
     box-shadow: 0px 0px 10px #5862b098;
+    margin: auto;
 }
 .days > div{
     border-right: 1px solid white;
